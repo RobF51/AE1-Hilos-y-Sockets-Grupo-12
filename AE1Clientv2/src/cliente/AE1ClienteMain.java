@@ -88,30 +88,70 @@ public class AE1ClienteMain {
 					
 					System.out.println("Introduzca la opcion");
 					codeOpc = sc.nextLine();
-					int codeopcint = Integer.parseInt(codeOpc);
-					if (codeopcint>3) {
+					int codeOpcInt = Integer.parseInt(codeOpc);
+					
+			
+					
+					switch (codeOpcInt) {
+						case 0:
+							System.out.println("CLIENTE: Se va a cerrar la conexion");
+							salida.println(codeOpcInt);
+							break;
+							
+						case 1:
+							System.out.println("CLIENTE: Introduzca el ISBN que quiere buscar (ej: 87)");
+							codeIsbn = sc.nextLine();
+							codeSum= codeOpc + "-" + codeIsbn;
+							
 						
-						System.out.println("Introduzca el nombre, isbn, autor y precio del libro");
-						System.out.println("Nombre");
-						codeNombre = sc.nextLine();
+							break;
+							
+						case 2:
+							System.out.println("CLIENTE: Introduzca el Titulo que quiere buscar (ej: Dune)");
+							codeNombre = sc.nextLine();
+							codeSum= codeOpc + "-" + codeNombre;
+							
+							break;
+							
+						case 3:
+							System.out.println("CLIENTE: Introduzca el Autor que quiere buscar (ej: Tolkien)");
+							codeAutor = sc.nextLine();
+							codeSum= codeOpc + "-" + codeAutor;
+							
+							break;
+							
+						case 4:
+							System.out.println("CLIENTE: Introduzca el Titulo que quiere añadir (ej: Dune)");
+							codeNombre = sc.nextLine();
+							
+							System.out.println("CLIENTE: Introduzca el Isbn que quiere añadir (ej: 87)");
+							
+							
+							codeIsbn = sc.nextLine();
+							
+							System.out.println("CLIENTE: Introduzca el autor que quiere añadir (ej: Tolkien)");
+							
+					
+							codeAutor = sc.nextLine();
+							
+							System.out.println("CLIENTE: Introduzca el precio que quiere añadir (ej: 45)");
+							
+					
+							codePrecio = sc.nextLine();
+							
+							
+							
+							codeSum = codeOpc + "-" + codeFun + "-" + codeNombre + "-" + codeIsbn + "-" + codeAutor + "-" +codePrecio ;
 						
-						System.out.println("Isbn");
-						codeIsbn = sc.nextLine();
-						
-						System.out.println("Autor");
-						codeAutor = sc.nextLine();
-						
-						System.out.println("Precio");
-						codePrecio = sc.nextLine();
+							break;
+							
+							
+
+						default:
+							break;
 					}
-					codeFun = sc.nextLine();
 					
-					codeSum = codeOpc + "-" + codeFun + "-" + codeNombre + "-" + codeIsbn + "-" + codeAutor + "-" +codePrecio ;
-					
-					
-					
-					
-					
+				
 					//emitimos un print de "texto" a la varaible de salida "salida" y se manda al server
 					
 					salida.println(codeSum);
