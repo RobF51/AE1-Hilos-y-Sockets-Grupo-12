@@ -64,7 +64,7 @@ public class AE1ClienteMain {
 
 				System.out.println("CLIENTE: \n 1. Consultar libro por ISBN \n " + "2. Consultar libro por titulo \n "
 						+ "3. Consultar libros por autor \n " + "4. Anadir libro \n "
-						+ "0. Salir (FIN para terminar): ");
+						+ "0. Salir \n");
 
 				// Se pide al usuario elejir una opcion
 				System.out.println("CLIENTE: Introduzca la opcion");
@@ -74,7 +74,7 @@ public class AE1ClienteMain {
 				switch (codeOpcInt) {
 				case 0:
 					System.out.println("CLIENTE: Se va a cerrar la conexion");
-					salida.println(codeOpcInt);
+					codeSum = codeOpc;
 					break;
 
 				case 1:
