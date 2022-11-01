@@ -13,7 +13,7 @@ public class HiloLibros implements Runnable {
 	private static int numCliente = 0;
 	private Socket socketAlCliente;
 
-	// Se crea el hilo desde el server
+	//Se crea el hilo desde el server
 	public HiloLibros(Socket socketAlCliente) {
 		numCliente++;
 		hilo = new Thread(this, "Cliente_" + numCliente);
@@ -67,7 +67,7 @@ public class HiloLibros implements Runnable {
 				// y tambien tener la informacion por otro lado
 
 				String[] codigos = texto.split("-");
-				String valorCons = codigos[1];
+				
 
 				int opcion = Integer.parseInt(codigos[0]);
 
@@ -80,6 +80,9 @@ public class HiloLibros implements Runnable {
 					// Alteramos el bool para cerrar el loop del hilo
 					continuar = false;
 				} else {
+					
+					String valorCons = codigos[1];
+					
 					System.out.println("HILO SERVIDOR: Se ha realizado una operacion en el servidor por el usuario "
 							+ hilo.getName());
 					String nombreSol = "";
